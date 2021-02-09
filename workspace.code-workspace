@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "DataAccess"
+		},
+		{
+			"path": "Entities"
+		},
+		{
+			"path": "Core"
+		},
+		{
+			"path": "ConsoleUI"
+		},
+		{
+			"path": "Business"
+		}
+	],
+	"settings": {}
+}
