@@ -46,21 +46,21 @@ namespace ConsoleUI
             carManager.Add(car3);
             carManager.Add(car4);
             carManager.Add(car5);
-            foreach (Car car in carManager.GetAll())
+            foreach (Car car in carManager.GetAll().Data)
             {
                 Console.WriteLine("Id:{0} - Description:{1} - Daily Price:{2}", car.Id, car.Description, car.DailyPrice);
             }
             Console.WriteLine("------------------------");
             carManager.Add(car6);
             Console.WriteLine("After Adding car has Id 6");
-            foreach (Car car in carManager.GetAll())
+            foreach (Car car in carManager.GetAll().Data)
             {
                 Console.WriteLine("Id:{0} - Description:{1} - Daily Price:{2}", car.Id, car.Description, car.DailyPrice);
             }
             Console.WriteLine("------------------------");
             carManager.Delete(car1);
             Console.WriteLine("After Deleting Car has Id 1");
-            foreach (Car car in carManager.GetAll())
+            foreach (Car car in carManager.GetAll().Data)
             {
                 Console.WriteLine("Id:{0} - Description:{1} - Daily Price:{2}", car.Id, car.Description, car.DailyPrice);
             }
@@ -68,13 +68,13 @@ namespace ConsoleUI
             car3.DailyPrice = 90;
             carManager.Update(car3);
             Console.WriteLine("After Updating car has id 3 with making DailyPrice 90");
-            foreach (Car car in carManager.GetAll())
+            foreach (Car car in carManager.GetAll().Data)
             {
                 Console.WriteLine("Id:{0} - Description:{1} - Daily Price:{2}", car.Id, car.Description, car.DailyPrice);
             }
             Console.WriteLine("------------------------");
             Console.WriteLine("GetCarDetails:");
-            foreach (var c in carManager.GetCarDetails())
+            foreach (var c in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine(" Car Name:{0} \n Brand Name:{1} \n Color Name {2} \n Daily Price:{3}\n\n", 
                                     c.CarName, c.BrandName, c.ColorName, c.DailyPrice);
