@@ -6,6 +6,8 @@ using Entities.DTOs;
 using System;
 using Core.Utilities.Results;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 
 namespace Business.Concrete
 {
@@ -16,6 +18,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             if (car.Description.Length>=2 && car.DailyPrice>0)
